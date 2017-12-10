@@ -2,10 +2,9 @@
 
 function BE = BECalc_Policy_minu(Valfun,R,beta,StaLen,noise)
 
-BE = zeros(1,StaLen);
+BE = zeros(1,StaLen); % Initialize the Bellman error to be zero for each state and action
 
-
-for x = 1:StaLen
+for x = 1:StaLen % Traversing through each state
 
     
     RplusValfun_x = zeros(1,StaLen);
@@ -13,7 +12,7 @@ for x = 1:StaLen
     Valfun_xtp1 = 0;
     NumOfXtp1 = 0;
     
-    % Look at all possible xtp1, give xt = x, to calculate the h(xtp1) in the case that noise "happened"
+    % Look at all possible xtp1, give xt = x, to calculate the h(xtp1) in the case that noise "occured"
     
     for xtp1 = 1:StaLen
         if(R(x,xtp1) ~= -100)
