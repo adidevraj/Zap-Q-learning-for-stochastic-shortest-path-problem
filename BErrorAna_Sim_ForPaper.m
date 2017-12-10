@@ -1,20 +1,10 @@
-% 5 rooms example
+% 6 state stochastic shortest path example; Application and comparison of different Q-learning algorithms
 clc
 clear all
 
 
-% load('Kinv_opt_2','Kinv_opt_2')
-% load('Kinv_Pol_2','Kinv_Pol_2')
-% R = [-10000 -10000 -10000 -10000 0 -10000
-%     -10000 -10000 -10000 0 -10000 100
-%     -10000 -10000 -10000 0 -10000 -10000
-%     -10000 0 0 -10000 0 -10000
-%     0 -10000 -10000 0 -10000 100
-%     -10000 0 -10000 -10000 0 100];
 
-
-
-
+% Reward matrix: Rows indicate the state and columns indicate the action; Here the action indicates the decision to which state the agent wants to go
 
 R = [0 -100 -100 -100 -5 -100
     -100 0 -100 -5 -100 100
