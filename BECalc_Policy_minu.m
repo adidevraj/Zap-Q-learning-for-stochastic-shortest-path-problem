@@ -1,3 +1,5 @@
+% Function used to find the Bellman error, given the value function estimate, the reward, discount factor, number of state action pairs, and the noise information (this essentially gives us the information on the transition probabilty matrix)
+
 function BE = BECalc_Policy_minu(Valfun,R,beta,StaLen,noise)
 
 BE = zeros(1,StaLen);
